@@ -82,10 +82,11 @@ function convertText() {
 
 function clickKeys(e) {
   const isKeyboardKeys = e.target.closest('.keyboard__key');
+  console.log(isKeyboardKeys);
   if (!isKeyboardKeys) return;
   textarea.focus();
-  e.target.classList.add('active');
-  setTimeout(() => e.target.classList.remove('active'), 200);
+  isKeyboardKeys.classList.add('active');
+  setTimeout(() => isKeyboardKeys.classList.remove('active'), 200);
 
   const ckClick = e.target.textContent;
   if (ckClick === 'keyboard_capslock') {
